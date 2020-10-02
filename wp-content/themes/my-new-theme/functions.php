@@ -24,3 +24,14 @@ function my_register_sidebars() {
 }
 
 add_action( 'widgets_init', 'my_register_sidebars' );
+
+function my_register_menus() {
+	register_nav_menus(
+		array(
+			'header-menu' => __( 'Header Menu' ),
+			'extra-menu'  => __( 'Extra Menu' )
+		)
+	);
+}
+
+add_action( 'init', 'my_register_menus' );
